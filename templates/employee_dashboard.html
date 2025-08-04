@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}Employee Dashboard - ALGEREST{% endblock %}
+
+{% block content %}
+<!-- Dashboard Header -->
+<section style="background: linear-gradient(135deg, #1E40AF, #3B82F6); color: white; padding: 40px 0;">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1 style="margin-bottom: 10px;">Employee Dashboard</h1>
+                <p style="opacity: 0.9;">Welcome back! Manage your projects and drawings.</p>
+            </div>
+            <div>
+                <a href="{{ url_for('employee_logout') }}" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: all 0.3s;">
+                    Sign Out
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dashboard Content -->
+<section class="section">
+    <div class="container">
+        <!-- Quick Stats -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 50px;">
+            <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 60px; height: 60px; background: #1E40AF; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">📋</div>
+                <h3 style="color: #1E40AF; margin-bottom: 10px;">Active Projects</h3>
+                <div style="font-size: 2rem; font-weight: bold; color: #F59E0B;">12</div>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 60px; height: 60px; background: #059669; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">📄</div>
+                <h3 style="color: #1E40AF; margin-bottom: 10px;">Drawings Processed</h3>
+                <div style="font-size: 2rem; font-weight: bold; color: #F59E0B;">1,247</div>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 60px; height: 60px; background: #F59E0B; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">🔧</div>
+                <h3 style="color: #1E40AF; margin-bottom: 10px;">Components</h3>
+                <div style="font-size: 2rem; font-weight: bold; color: #F59E0B;">8,456</div>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+                <div style="width: 60px; height: 60px; background: #DC2626; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">⚡</div>
+                <h3 style="color: #1E40AF; margin-bottom: 10px;">AI Processing</h3>
+                <div style="font-size: 2rem; font-weight: bold; color: #F59E0B;">95%</div>
+            </div>
+        </div>
+
+        <!-- Main Actions -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- AI Drawing Processing -->
+            <div class="card" style="background: linear-gradient(135deg, #1E40AF, #3B82F6); color: white;">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🤖</div>
+                    <h3 style="color: white;">AI Drawing Processor</h3>
+                </div>
+                <p style="opacity: 0.9; margin-bottom: 20px;">Upload and process up to 150 drawings automatically. AI will extract components, plates, and generate detailed parts lists.</p>
+                <a href="{{ url_for('employee_drawings') }}" style="background: rgba(255,255,255,0.2); color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block; transition: all 0.3s;">
+                    Process Drawings →
+                </a>
+            </div>
+
+            <!-- Project Management -->
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background: #059669; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">📊</div>
+                    <h3>Project Management</h3>
+                </div>
+                <p style="margin-bottom: 20px;">Track project progress, manage timelines, and coordinate with team members on active steel structure projects.</p>
+                <a href="#" style="background: #059669; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                    Manage Projects →
+                </a>
+            </div>
+
+            <!-- Component Library -->
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background: #F59E0B; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">🗃️</div>
+                    <h3>Component Library</h3>
+                </div>
+                <p style="margin-bottom: 20px;">Browse and search through processed components, plates, and assemblies from previous projects.</p>
+                <a href="#" style="background: #F59E0B; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                    Browse Library →
+                </a>
+            </div>
+
+            <!-- Quality Control -->
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background: #DC2626; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">✓</div>
+                    <h3>Quality Control</h3>
+                </div>
+                <p style="margin-bottom: 20px;">Review AI processing results, validate component specifications, and ensure accuracy of generated data.</p>
+                <a href="#" style="background: #DC2626; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                    Review Quality →
+                </a>
+            </div>
+
+            <!-- Reports & Analytics -->
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background: #7C3AED; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">📈</div>
+                    <h3>Reports & Analytics</h3>
+                </div>
+                <p style="margin-bottom: 20px;">Generate detailed reports on production capacity, material usage, and project efficiency metrics.</p>
+                <a href="#" style="background: #7C3AED; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                    View Reports →
+                </a>
+            </div>
+
+            <!-- Settings -->
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <div style="width: 60px; height: 60px; background: #64748B; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">⚙️</div>
+                    <h3>AI Settings</h3>
+                </div>
+                <p style="margin-bottom: 20px;">Configure AI processing parameters, define custom logic for component classification and data extraction.</p>
+                <a href="#" style="background: #64748B; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                    Configure AI →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Activity -->
+<section class="section" style="background: #F8FAFC;">
+    <div class="container">
+        <h2 class="section-title">Recent Activity</h2>
+
+        <div style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow: hidden;">
+            <div style="padding: 20px; border-bottom: 1px solid #E2E8F0;">
+                <h3 style="color: #1E40AF;">Latest Processing Results</h3>
+            </div>
+
+            <div style="padding: 20px;">
+                <div style="display: grid; gap: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #F8FAFC; border-radius: 8px;">
+                        <div>
+                            <h4 style="color: #1E40AF; margin-bottom: 5px;">Project_2024_001 - 47 drawings processed</h4>
+                            <p style="color: #64748B; margin: 0; font-size: 0.9rem;">Extracted 234 plates, 89 beams, 156 connections</p>
+                        </div>
+                        <div style="color: #059669; font-weight: bold;">✓ Complete</div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #F8FAFC; border-radius: 8px;">
+                        <div>
+                            <h4 style="color: #1E40AF; margin-bottom: 5px;">Industrial_Hall_B - 23 drawings processed</h4>
+                            <p style="color: #64748B; margin: 0; font-size: 0.9rem;">Extracted 145 plates, 67 beams, 98 connections</p>
+                        </div>
+                        <div style="color: #F59E0B; font-weight: bold;">⏳ Processing</div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #F8FAFC; border-radius: 8px;">
+                        <div>
+                            <h4 style="color: #1E40AF; margin-bottom: 5px;">Bridge_Section_C - 12 drawings queued</h4>
+                            <p style="color: #64748B; margin: 0; font-size: 0.9rem;">Waiting for AI processing...</p>
+                        </div>
+                        <div style="color: #64748B; font-weight: bold;">⏸️ Queued</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

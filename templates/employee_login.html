@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Employee Sign In - ALGEREST{% endblock %}
+
+{% block content %}
+<section class="section" style="min-height: 80vh; display: flex; align-items: center;">
+    <div class="container">
+        <div style="max-width: 400px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1E40AF, #3B82F6); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">👤</div>
+                    <h2 style="color: #1E40AF; margin-bottom: 10px;">Employee Portal</h2>
+                    <p style="color: #64748B;">Sign in to access your workspace</p>
+                </div>
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ 'success' if category == 'success' else 'error' }}" style="margin-bottom: 20px; padding: 15px; border-radius: 5px; {% if category == 'error' %}background-color: #FEE2E2; color: #DC2626; border: 1px solid #FECACA;{% endif %}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <form method="POST">
+                    <div style="margin-bottom: 20px;">
+                        <label for="username" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Username</label>
+                        <input type="text" id="username" name="username" required 
+                               style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;" 
+                               onfocus="this.style.borderColor='#1E40AF'" 
+                               onblur="this.style.borderColor='#E2E8F0'">
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label for="password" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Password</label>
+                        <input type="password" id="password" name="password" required 
+                               style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;" 
+                               onfocus="this.style.borderColor='#1E40AF'" 
+                               onblur="this.style.borderColor='#E2E8F0'">
+                    </div>
+
+                    <button type="submit" style="width: 100%; background: linear-gradient(135deg, #1E40AF, #3B82F6); color: white; padding: 15px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: all 0.3s;" 
+                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(30, 64, 175, 0.4)'" 
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Sign In
+                    </button>
+                </form>
+
+                <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #E2E8F0;">
+                    <p style="color: #64748B; font-size: 0.9rem;">
+                        Demo credentials: admin / admin123
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="{{ url_for('index') }}" style="color: #64748B; text-decoration: none; font-size: 0.9rem;">← Back to main site</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

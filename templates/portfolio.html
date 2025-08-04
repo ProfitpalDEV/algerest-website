@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - ALGEREST Metal Manufacturing Projects{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="hero" style="height: 50vh;">
+    <div class="hero-content">
+        <h1>Our Portfolio</h1>
+        <p>Showcasing excellence in metal manufacturing and fabrication</p>
+    </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A showcase of our most challenging and innovative metal fabrication projects</p>
+
+        <div style="display: grid; gap: 60px; margin-top: 50px;">
+            <!-- Project 1 -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div style="background: linear-gradient(135deg, #64748B, #94A3B8); height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
+                    Industrial Steel Framework<br>
+                    <small style="opacity: 0.8;">Manufacturing Plant - 2024</small>
+                </div>
+                <div>
+                    <h3 style="color: #1E40AF; font-size: 1.8rem; margin-bottom: 20px;">Advanced Manufacturing Facility</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                        Complete structural steel framework for a 50,000 sq ft manufacturing facility, including heavy-duty support beams, equipment platforms, and specialized mounting systems.
+                    </p>
+                    <ul style="color: #64748B; margin-bottom: 20px;">
+                        <li>Project Value: $2.8M</li>
+                        <li>Timeline: 8 months</li>
+                        <li>Steel Used: 450 tons</li>
+                        <li>Industry: Automotive Manufacturing</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span style="background: #E0F2FE; color: #0369A1; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Structural Steel</span>
+                        <span style="background: #E0F2FE; color: #0369A1; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Heavy Fabrication</span>
+                        <span style="background: #E0F2FE; color: #0369A1; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">ISO Certified</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div>
+                    <h3 style="color: #1E40AF; font-size: 1.8rem; margin-bottom: 20px;">Commercial Building Facade</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                        Custom architectural metalwork for a premium office building, featuring intricate decorative panels, curtain wall systems, and artistic entrance features.
+                    </p>
+                    <ul style="color: #64748B; margin-bottom: 20px;">
+                        <li>Project Value: $1.2M</li>
+                        <li>Timeline: 5 months</li>
+                        <li>Area Covered: 15,000 sq ft</li>
+                        <li>Industry: Commercial Real Estate</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span style="background: #FEF3C7; color: #92400E; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Aluminum</span>
+                        <span style="background: #FEF3C7; color: #92400E; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Architectural</span>
+                        <span style="background: #FEF3C7; color: #92400E; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Custom Design</span>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(135deg, #F59E0B, #FBBF24); height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
+                    Architectural Metalwork<br>
+                    <small style="opacity: 0.8;">Office Building - 2024</small>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div style="background: linear-gradient(135deg, #1E40AF, #3B82F6); height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center;">
+                    Precision Equipment Frame<br>
+                    <small style="opacity: 0.8;">Tech Company - 2023</small>
+                </div>
+                <div>
+                    <h3 style="color: #1E40AF; font-size: 1.8rem; margin-bottom: 20px;">High-Tech Equipment Housing</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                        Precision-engineered stainless steel housing and support structures for sensitive electronic equipment, requiring exact tolerances and superior finish quality.
+                    </p>
+                    <ul style="color: #64748B; margin-bottom: 20px;">
+                        <li>Project Value: $850K</li>
+                        <li>Timeline: 4 months</li>
+                        <li>Tolerance: ±0.1mm</li>
+                        <li>Industry: Technology/Electronics</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span style="background: #ECFDF5; color: #065F46; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Stainless Steel</span>
+                        <span style="background: #ECFDF5; color: #065F46; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Precision</span>
+                        <span style="background: #ECFDF5; color: #065F46; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">Clean Room</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Categories -->
+<section class="section" style="background: #F8FAFC;">
+    <div class="container">
+        <h2 class="section-title">Project Categories</h2>
+        <p class="section-subtitle">Explore our work across different industries and applications</p>
+
+        <div class="cards-grid">
+            <div class="card" style="text-align: center;">
+                <div style="background: linear-gradient(135deg, #1E40AF, #3B82F6); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 10px; color: white;">Industrial Projects</h3>
+                    <div style="font-size: 2rem; font-weight: bold;">35+</div>
+                </div>
+                <p>Manufacturing facilities, equipment frames, and industrial infrastructure projects completed successfully.</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <div style="background: linear-gradient(135deg, #F59E0B, #FBBF24); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 10px; color: white;">Commercial Buildings</h3>
+                    <div style="font-size: 2rem; font-weight: bold;">28+</div>
+                </div>
+                <p>Office buildings, retail spaces, and commercial architectural metalwork projects of various scales.</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <div style="background: linear-gradient(135deg, #059669, #10B981); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 10px; color: white;">Custom Fabrication</h3>
+                    <div style="font-size: 2rem; font-weight: bold;">150+</div>
+                </div>
+                <p>Unique, one-of-a-kind metal components and structures designed to exact customer specifications.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Testimonials -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Real feedback from satisfied customers</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px;">
+            <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-left: 5px solid #1E40AF;">
+                <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 20px; color: #334155;">
+                    "ALGEREST delivered exceptional quality on our manufacturing facility project. Their attention to detail and commitment to deadlines made them our preferred partner for future projects."
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 50px; height: 50px; background: #1E40AF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        JM
+                    </div>
+                    <div>
+                        <div style="font-weight: bold; color: #1E40AF;">John Martinez</div>
+                        <div style="color: #64748B; font-size: 0.9rem;">Project Manager, AutoTech Industries</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-left: 5px solid #F59E0B;">
+                <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 20px; color: #334155;">
+                    "The architectural metalwork for our office building exceeded expectations. ALGEREST's team understood our vision and brought it to life with precision and artistry."
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 50px; height: 50px; background: #F59E0B; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        SC
+                    </div>
+                    <div>
+                        <div style="font-weight: bold; color: #1E40AF;">Sarah Chen</div>
+                        <div style="color: #64748B; font-size: 0.9rem;">Architect, Modern Design Studio</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-left: 5px solid #059669;">
+                <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 20px; color: #334155;">
+                    "Outstanding service from consultation to delivery. Their expertise in precision fabrication helped us achieve the exact specifications we needed for our equipment."
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 50px; height: 50px; background: #059669; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                        RW
+                    </div>
+                    <div>
+                        <div style="font-weight: bold; color: #1E40AF;">Robert Williams</div>
+                        <div style="color: #64748B; font-size: 0.9rem;">Engineering Director, TechnoFab Solutions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics -->
+<section class="section" style="background: linear-gradient(135deg, #1E3A8A, #1E40AF); color: white;">
+    <div class="container">
+        <h2 class="section-title" style="color: white;">Project Statistics</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; margin-top: 50px;">
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #F59E0B; margin-bottom: 10px;">500+</div>
+                <p style="font-size: 1.2rem;">Projects Completed</p>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #F59E0B; margin-bottom: 10px;">98%</div>
+                <p style="font-size: 1.2rem;">Client Satisfaction</p>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #F59E0B; margin-bottom: 10px;">15,000+</div>
+                <p style="font-size: 1.2rem;">Tons of Steel Processed</p>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #F59E0B; margin-bottom: 10px;">95%</div>
+                <p style="font-size: 1.2rem;">On-Time Delivery</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section" style="background: #F8FAFC;">
+    <div class="container" style="text-align: center;">
+        <h2 class="section-title">Start Your Next Project</h2>
+        <p class="section-subtitle">Ready to bring your metal fabrication project to life? Let's discuss your requirements.</p>
+        <a href="{{ url_for('contact') }}" class="cta-button" style="font-size: 1.2rem; padding: 20px 40px;">Contact Us Today</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - ALGEREST Steel Manufacturing{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="hero" style="height: 50vh;">
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Get in touch for your steel structure manufacturing project</p>
+    </div>
+</section>
+
+<!-- Contact Form & Info Section -->
+<section class="section">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+            <!-- Contact Form -->
+            <div>
+                <h2 style="color: #1E40AF; font-size: 2rem; margin-bottom: 30px;">Request a Quote</h2>
+                <p style="color: #64748B; margin-bottom: 30px; font-size: 1.1rem;">
+                    Fill out the form below and our team will get back to you within 24 hours with a detailed quote for your steel structure project.
+                </p>
+
+                <form method="POST" style="background: #F8FAFC; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="margin-bottom: 25px;">
+                        <label for="name" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Full Name *</label>
+                        <input type="text" id="name" name="name" required 
+                               style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 5px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <label for="email" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Email Address *</label>
+                        <input type="email" id="email" name="email" required 
+                               style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 5px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <label for="company" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Company Name</label>
+                        <input type="text" id="company" name="company" 
+                               style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 5px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <label for="phone" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" 
+                               style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 5px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <label for="project_type" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Project Type</label>
+                        <select id="project_type" name="project_type" 
+                                style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 5px; font-size: 1rem;">
+                            <option value="">Select Project Type</option>
+                            <option value="building">Building Structures</option>
+                            <option value="industrial">Industrial Structures</option>
+                            <option value="infrastructure">Infrastructure Projects</option>
+                            <option value="custom">Custom Steel Fabrication</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <label for="message" style="display: block; margin-bottom: 8px; font-weight: bold; color: #334155;">Project Details *</label>
+                        <textarea id="message" name="message" rows="6" required 
+                                  placeholder="Please describe your steel structure requirements, timeline, and any specific details..."
+                                  style="width: 100%; padding: 12px; border: 2px solid #E2E8F0; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h2 style="color: #1E40AF; font-size: 2rem; margin-bottom: 30px;">Get In Touch</h2>
+
+                <!-- Contact Details -->
+                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #1E40AF; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            📍 Address
+                        </h3>
+                        <p style="color: #64748B;">
+                            Estonia, Harjumaa region, 74207<br>
+                            Liivamäe küla, Jõelähtme vald<br>
+                            Linnuka street 5
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #1E40AF; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            📞 Phone
+                        </h3>
+                        <p style="color: #64748B;">
+                            Main: +372 566 73 295<br>
+                            Project Manager: +372 5678 22 44
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #1E40AF; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            ✉️ Email
+                        </h3>
+                        <p style="color: #64748B;">
+                            General: info@algerest.eu<br>
+                            Project Manager: valeri@algerest.eu
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 style="color: #1E40AF; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            🏢 Company Details
+                        </h3>
+                        <p style="color: #64748B;">
+                            Registration: 14231186<br>
+                            KMKR: EE101977605<br>
+                            Bank: Swedbank A/A 221052851167<br>
+                            IBAN: EE222200221066461145
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Contact -->
+                <div style="background: linear-gradient(135deg, #1E40AF, #3B82F6); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 20px; color: white;">Direct Contact</h3>
+
+                    <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                        <h4 style="color: white; margin-bottom: 10px;">Stanislav Jurtsenko - CEO</h4>
+                        <p style="margin: 0; opacity: 0.9;">
+                            📞 +372 566 73 295<br>
+                            ✉️ info@algerest.eu
+                        </p>
+                    </div>
+
+                    <div style="padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                        <h4 style="color: white; margin-bottom: 10px;">Valeri Kushnin - Project Manager</h4>
+                        <p style="margin: 0; opacity: 0.9;">
+                            📞 +372 5678 22 44<br>
+                            ✉️ valeri@algerest.eu
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section" style="background: #F8FAFC;">
+    <div class="container">
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">Manufacturing and installation of steel structures</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px;">
+            <div style="text-align: center; padding: 20px;">
+                <div style="width: 80px; height: 80px; background: #1E40AF; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">🏗️</div>
+                <h3 style="color: #1E40AF; margin-bottom: 15px;">Building Sector</h3>
+                <p style="color: #64748B;">Steel structures for residential, commercial and office buildings</p>
+            </div>
+
+            <div style="text-align: center; padding: 20px;">
+                <div style="width: 80px; height: 80px; background: #1E40AF; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">🏭</div>
+                <h3 style="color: #1E40AF; margin-bottom: 15px;">Industrial Sector</h3>
+                <p style="color: #64748B;">Manufacturing facilities, warehouses and industrial complexes</p>
+            </div>
+
+            <div style="text-align: center; padding: 20px;">
+                <div style="width: 80px; height: 80px; background: #1E40AF; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">🌉</div>
+                <h3 style="color: #1E40AF; margin-bottom: 15px;">Infrastructure Sector</h3>
+                <p style="color: #64748B;">Bridges, transportation and public infrastructure projects</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Production Capabilities -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Our Capabilities</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; margin-top: 50px;">
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #1E40AF; margin-bottom: 10px;">4000 m²</div>
+                <p style="font-size: 1.2rem; color: #64748B;">Production area</p>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #1E40AF; margin-bottom: 10px;">4×10 tons</div>
+                <p style="font-size: 1.2rem; color: #64748B;">Cranes capacity</p>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #1E40AF; margin-bottom: 10px;">4800</div>
+                <p style="font-size: 1.2rem; color: #64748B;">Tons/year capacity</p>
+            </div>
+            <div>
+                <div style="font-size: 3rem; font-weight: bold; color: #1E40AF; margin-bottom: 10px;">400</div>
+                <p style="font-size: 1.2rem; color: #64748B;">Tons/month average</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
